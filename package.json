@@ -1,6 +1,6 @@
 {
-  "name": "taboo-cord",
-  "version": "1.1.0",
+  "name": "kottu",
+  "version": "2.0.0",
   "description": "The Multiplayer Discord Bot to spice up your server",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "taboo"
   ],
   "author": "ARLO",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "ascii-table": "^0.0.9",
     "better-sqlite3": "^7.6.2",
@@ -26,5 +26,13 @@
   },
   "devDependencies": {
     "eslint": "^8.24.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NixDevs/Kottu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NixDevs/Kottu/issues"
+  },
+  "homepage": "https://github.com/NixDevs/Kottu#readme"
 }
