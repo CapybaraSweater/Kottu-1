@@ -1,0 +1,30 @@
+{
+  "name": "taboo-cord",
+  "version": "1.1.0",
+  "description": "The Multiplayer Discord Bot to spice up your server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "discord",
+    "fun",
+    "taboo"
+  ],
+  "author": "ARLO",
+  "license": "MIT",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "better-sqlite3": "^7.6.2",
+    "common-tags": "^1.8.2",
+    "discord.js": "^14.4.0",
+    "dotenv": "^16.0.3",
+    "path": "^0.12.7",
+    "timer.js": "^1.0.4",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.24.0"
+  }
+}

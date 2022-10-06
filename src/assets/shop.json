@@ -1,0 +1,17 @@
+{
+    "customColor": 500,
+    "banners": {
+        "kanye_east": {
+            "url": "",
+            "price": 100
+        },
+        "walter_white": {
+            "url": "",
+            "price": 150
+        },
+        "budget": {
+            "url": "",
+            "price": 25
+        }
+    } 
+}
