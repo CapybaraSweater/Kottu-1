@@ -24,7 +24,7 @@ module.exports = class CAH extends Command {
         return Promise.resolve();
     }
     start(int) {
-        int.reply('Creating a game');
+        int.reply({ content: 'Creating a game' , ephemeral: true });
         return this.kottu.plugins.get('Cards against humanity').start(int.channel, false);
     }
 

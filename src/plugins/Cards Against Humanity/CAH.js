@@ -20,19 +20,19 @@ module.exports = class CAH extends Base {
             }
         };
         const input = new TextInputBuilder()
-            .setCustomId(this.channel.guild.id)
+            .setCustomId(this.channel.id)
             .setLabel('Submission')
             .setPlaceholder('Be funny for once in your life')
             .setRequired(true)
             .setMaxLength(500)
             .setStyle(TextInputStyle.Short);
         this.modal = new ModalBuilder()
-            .setCustomId(this.channel.guildId)
+            .setCustomId(this.channelId)
             .setTitle('Cards against humanity');
         const actionRow = new ActionRowBuilder().addComponents(input);
 
         const button = new ButtonBuilder()
-            .setCustomId(this.channel.guild.id)
+            .setCustomId(this.channel.id)
             .setLabel('Submit Answer!')
             .setStyle(ButtonStyle.Primary);
 
@@ -40,7 +40,7 @@ module.exports = class CAH extends Base {
             .addComponents(button);
         
         const button2 = new ButtonBuilder()
-            .setCustomId(this.channel.guild.id)
+            .setCustomId(this.channel.id)
             .setLabel('Submit Answer!')
             .setStyle(ButtonStyle.Primary)
             .setDisabled();
@@ -65,10 +65,9 @@ module.exports = class CAH extends Base {
             const num = parseInt(m.content);
             if (isNaN(num)) return;
             const selected = this.data[num-1];
-            console.log(selected);
             if (!selected) return;
             if (selected.user === m.author.id) return;
-            this.data[num].points += 1;
+            this.data[num-1].points += 1;
             this.voted.push(m.author.id);
             m.delete();
         });
@@ -77,7 +76,7 @@ module.exports = class CAH extends Base {
         });
     }
     lonely() {
-        delete this.module.games[this.channel.guild.id];
+        delete this.module.games[this.channel.id];
         return this.channel.send('Cancelled due to less than 2 submissions');
     }
     end() {
@@ -94,24 +93,6 @@ module.exports = class CAH extends Base {
                 }
             ]
         });
-    }
-    async interactionCreate(int) {
-
-        if (int.isButton()) {
-            console.log(int.customId);
-            if (int.customId !== this.channel.guild.id) return;
-            console.log('a');
-            
-            await int.showModal(this.modal);
-        }
-        if (int.isModalSubmit()) {
-            if (this.data.find(r=>r.user === int.user.id)) return;
-            const submission = int.fields.getTextInputValue(int.guildId);
-
-            this.data.push({ user: int.user.id, submission: submission, points: 0 });
-            return int.reply({ content: 'Submitted!', ephemeral: true });
-        }
-
     }
 };
 //

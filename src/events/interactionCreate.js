@@ -6,8 +6,8 @@
  * @param {import('discord.js').Interaction} interaction 
  */
 module.exports = (kottu, interaction) => {
-    const { client } = kottu;
     if (interaction.isCommand()) {
+        if (!interaction.guild.id) return;
         const { commandName } = interaction;
         if (!commandName) return;
         const command = kottu.commands.get(commandName);

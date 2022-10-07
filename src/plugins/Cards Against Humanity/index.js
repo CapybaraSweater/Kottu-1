@@ -17,14 +17,16 @@ module.exports = class CardsAgainstHumanityPlugin extends Plugin {
         return text;
     }
     start(channel, explicit) {
-        
+        if (this.games[channel.id]) return channel.send('A game is already running in this channel');
         const game = new Game(this, channel, explicit);
         return this.games[channel.guild.id] = game;
     }
     async interactionCreate(int) {
         if (int.isButton()) {
+            
             if (!this.games[int.customId]) return;
-            if (int.customId !== int.channel.guild.id) return;
+            if (this.games[int.customId].data.find(r=>r.user === int.user.id)) return int.reply({content:'u cant submit again', ephemeral: true});
+            if (int.customId !== int.channel.id) return;
             
             await int.showModal(this.games[int.customId].modal);
         }
