@@ -1,5 +1,5 @@
 const Plugin = require('../../structures/Plugin');
-
+const Game = require('./CAH');
 module.exports = class CardsAgainstHumanityPlugin extends Plugin {
     constructor(...args) {
         super(...args);
@@ -12,6 +12,28 @@ module.exports = class CardsAgainstHumanityPlugin extends Plugin {
         if (explicit === true) file = 'expl-cah.json';
         const json = require('../../assets/'+file);
         const b = json[0].black.filter(r=>r.pick===1);
-        return b[Math.round(Math.random()*b.length)].text;
+        let text =  b[Math.round(Math.random()*b.length)].text;
+        if (!text.includes('_')) text = text + ' _.';
+        return text;
     }
+    start(channel, explicit) {
+        
+        const game = new Game(this, channel, explicit);
+        return this.games[channel.guild.id] = game;
+    }
+    async interactionCreate(int) {
+        if (int.isButton()) {
+            if (!this.games[int.customId]) return;
+            if (int.customId !== int.channel.guild.id) return;
+            
+            await int.showModal(this.games[int.customId].modal);
+        }
+        if (int.isModalSubmit()) {
+            if (!this.games[int.customId]) return;
+            const submission = int.fields.getTextInputValue(int.guildId);
+            this.games[int.customId].data.push({ user: int.user.id, submission: submission, points: 0 });
+            return int.reply({ content: 'Submitted!', ephemeral: true });
+        }        
+    }
+
 };
