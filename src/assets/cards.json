@@ -5681,9 +5681,9 @@
       "Lungs",
       "Pump",
       "Breath",
-      "Inside Body",
-      "2 Of Them",
-      ""
+      "Inside",
+      "Breathing",
+      "Ribs"
      ]
     },
     {
@@ -5695,17 +5695,6 @@
       "Waste",
       "Garbage",
       "Worker"
-     ]
-    },
-    {
-     "word": "Rima",
-     "taboo": [
-      "Rima",
-      "Skdjf",
-      "Lksajdf",
-      "Lkjsadf",
-      "Lkajsdf",
-      "Lkajdsf"
      ]
     },
     {
@@ -7447,17 +7436,6 @@
      ]
     },
     {
-     "word": "Aksdkfja",
-     "taboo": [
-      "Aksdkfja",
-      "Ajksdjfja",
-      "Klajsdjfak",
-      "Kajfak",
-      "Kjakdjfa",
-      "Kajsfja"
-     ]
-    },
-    {
      "word": "Tom Brady",
      "taboo": [
       "Tom Brady",
@@ -7774,17 +7752,6 @@
       "Fghj",
       "Dfghj",
       "Ugyy"
-     ]
-    },
-    {
-     "word": "Adfhjkl",
-     "taboo": [
-      "Adfhjkl",
-      "Kkmfkfd",
-      "Kdgmkdf",
-      "Rfipjw",
-      "Lthdflthr",
-      "Lhltker"
      ]
     },
     {
@@ -10263,17 +10230,6 @@
      ]
     },
     {
-     "word": "Lungs",
-     "taboo": [
-      "Lungs",
-      "Pump",
-      "Breath",
-      "Inside Body",
-      "2 Of Them",
-      ""
-     ]
-    },
-    {
      "word": "Coconut",
      "taboo": [
       "Coconut",
@@ -10703,17 +10659,6 @@
      ]
     },
     {
-     "word": "Rubn",
-     "taboo": [
-      "Rubn",
-      "Jlk",
-      "Jkl",
-      "Jkl",
-      "Jkl",
-      "Jkl"
-     ]
-    },
-    {
      "word": "Stretch Marks",
      "taboo": [
       "Stretch Marks",
@@ -11077,17 +11022,6 @@
      ]
     },
     {
-     "word": "Four-Ten",
-     "taboo": [
-      "Four-Ten",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    },
-    {
      "word": "Social Worker",
      "taboo": [
       "Social Worker",
@@ -11294,17 +11228,6 @@
       "Bird",
       "Fish",
       "Hamster"
-     ]
-    },
-    {
-     "word": "Http://Pgqevjpv",
-     "taboo": [
-      "Http://Pgqevjpv",
-      "",
-      "",
-      "",
-      "",
-      ""
      ]
     },
     {
@@ -11712,17 +11635,6 @@
       "Triangle",
       "Sardar",
       "Worship"
-     ]
-    },
-    {
-     "word": "Rubn",
-     "taboo": [
-      "Rubn",
-      "Jlk",
-      "Jkl",
-      "Jkl",
-      "Jkl",
-      "Jkl"
      ]
     },
     {
@@ -12164,40 +12076,6 @@
       "Funny",
       "Jump",
       "Tennis"
-     ]
-    },
-    {
-     "word": "Happy Birthday",
-     "taboo": [
-      "Happy Birthday",
-      "Love",
-      "",
-      "Your",
-      "Favorite",
-      "San Francisco",
-      "Geek"
-     ]
-    },
-    {
-     "word": "Freddegredde",
-     "taboo": [
-      "Freddegredde",
-      "Medley",
-      "Youtube",
-      "Thirteen-Eight",
-      "Swedish",
-      "Fredrick"
-     ]
-    },
-    {
-     "word": "Checking Accoun",
-     "taboo": [
-      "Checking Accoun",
-      "Free",
-      "Debit",
-      "Bill Pay",
-      "Convenience",
-      "Cu Online"
      ]
     },
     {
@@ -17415,17 +17293,6 @@
      ]
     },
     {
-     "word": "Yarrak",
-     "taboo": [
-      "Yarrak",
-      "5 Harfli",
-      "Erkekte Bulunur",
-      "Asd",
-      "Afds",
-      "Adfs"
-     ]
-    },
-    {
      "word": "Snow Man",
      "taboo": [
       "Snow Man",
@@ -20722,7 +20589,7 @@
       "Power",
       "Cell",
       "Double",
-      "",
+      "Charge",
       "Nuclear"
      ]
     },
@@ -23313,17 +23180,6 @@
      ]
     },
     {
-     "word": "Aksdkfja",
-     "taboo": [
-      "Aksdkfja",
-      "Ajksdjfja",
-      "Klajsdjfak",
-      "Kajfak",
-      "Kjakdjfa",
-      "Kajsfja"
-     ]
-    },
-    {
      "word": "Boiling Point",
      "taboo": [
       "Boiling Point",
@@ -24501,28 +24357,6 @@
      ]
     },
     {
-     "word": "Reyna",
-     "taboo": [
-      "Reyna",
-      "Praoter",
-      "New Rome",
-      "Spqr",
-      "Percy Jackson",
-      "Bellona"
-     ]
-    },
-    {
-     "word": "Rubn",
-     "taboo": [
-      "Rubn",
-      "Jlk",
-      "Jkl",
-      "Jkl",
-      "Jkl",
-      "Jkl"
-     ]
-    },
-    {
      "word": "Glaiza",
      "taboo": [
       "Glaiza",
@@ -24589,14 +24423,14 @@
      ]
     },
     {
-     "word": "Bannana",
+     "word": "Banana",
      "taboo": [
-      "Bannana",
+      "Banana",
       "Fruit",
-      "This",
-      "Is",
-      "A",
-      "Thing"
+      "Yello",
+      "Ripe",
+      "Long",
+      "Tree"
      ]
     },
     {
@@ -25810,17 +25644,6 @@
      ]
     },
     {
-     "word": "Http://Phen375R",
-     "taboo": [
-      "Http://Phen375R",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    },
-    {
      "word": "Stydia",
      "taboo": [
       "Stydia",
@@ -25917,17 +25740,6 @@
       "Gorgeous",
       "Party",
       "You"
-     ]
-    },
-    {
-     "word": "Http://Pgqevjpv",
-     "taboo": [
-      "Http://Pgqevjpv",
-      "",
-      "",
-      "",
-      "",
-      ""
      ]
     },
     {
@@ -26998,17 +26810,6 @@
      ]
     },
     {
-     "word": "Please Remove",
-     "taboo": [
-      "Please Remove",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    },
-    {
      "word": "Treble Clef",
      "taboo": [
       "Treble Clef",
@@ -27578,17 +27379,6 @@
       "Sev",
       "Delhi",
       "Juhu Beach"
-     ]
-    },
-    {
-     "word": "Dadsfads",
-     "taboo": [
-      "Dadsfads",
-      "Sfsdf",
-      "Adfdsf",
-      "Dsfdsf",
-      "Asdfds",
-      "Adsfasdfasdf"
      ]
     },
     {
@@ -29992,17 +29782,6 @@
      ]
     },
     {
-     "word": "Aksdkfja",
-     "taboo": [
-      "Aksdkfja",
-      "Ajksdjfja",
-      "Klajsdjfak",
-      "Kajfak",
-      "Kjakdjfa",
-      "Kajsfja"
-     ]
-    },
-    {
      "word": "Kung Fu Panda",
      "taboo": [
       "Kung Fu Panda",
@@ -30352,17 +30131,6 @@
       "Thinknoodles",
       "Youtube",
       "No Intelligence"
-     ]
-    },
-    {
-     "word": "Http://Phen375R",
-     "taboo": [
-      "Http://Phen375R",
-      "",
-      "",
-      "",
-      "",
-      ""
      ]
     },
     {
@@ -35030,17 +34798,6 @@
      ]
     },
     {
-     "word": "Bannana",
-     "taboo": [
-      "Bannana",
-      "Fruit",
-      "This",
-      "Is",
-      "A",
-      "Thing"
-     ]
-    },
-    {
      "word": "Skateboard",
      "taboo": [
       "Skateboard",
@@ -36537,17 +36294,6 @@
      ]
     },
     {
-     "word": "Rima",
-     "taboo": [
-      "Rima",
-      "Skdjf",
-      "Lksajdf",
-      "Lkjsadf",
-      "Lkajsdf",
-      "Lkajdsf"
-     ]
-    },
-    {
      "word": "Ottoman",
      "taboo": [
       "Ottoman",
@@ -36655,17 +36401,6 @@
       "Final",
       "Next",
       "Opposite Past"
-     ]
-    },
-    {
-     "word": "Rubn",
-     "taboo": [
-      "Rubn",
-      "Jlk",
-      "Jkl",
-      "Jkl",
-      "Jkl",
-      "Jkl"
      ]
     },
     {
@@ -39947,17 +39682,6 @@
      ]
     },
     {
-     "word": "Akshay",
-     "taboo": [
-      "Akshay",
-      "Akki",
-      "Aks",
-      "Fox",
-      "Foxkid",
-      "Useless"
-     ]
-    },
-    {
      "word": "Macaroni",
      "taboo": [
       "Macaroni",
@@ -39999,17 +39723,6 @@
       "Bombay",
       "Madras",
       "Calcutta"
-     ]
-    },
-    {
-     "word": "Scale",
-     "taboo": [
-      "Scale",
-      "Number",
-      "Asdf",
-      "Ads",
-      "Adsiii",
-      "Asdi"
      ]
     },
     {
@@ -40101,17 +39814,6 @@
      ]
     },
     {
-     "word": "Atoll",
-     "taboo": [
-      "Atoll",
-      "Tropical",
-      "Desolate",
-      "Island",
-      "Sand",
-      "Ocean"
-     ]
-    },
-    {
      "word": "Noodles",
      "taboo": [
       "Noodles",
@@ -40175,17 +39877,6 @@
       "Invisibility",
       "Cold",
       "Costume"
-     ]
-    },
-    {
-     "word": "Teckel",
-     "taboo": [
-      "Teckel",
-      "Low",
-      "Long",
-      "Jumpy",
-      "Hunter",
-      "Animal"
      ]
     },
     {
@@ -40373,17 +40064,6 @@
       "Sea",
       "Whale",
       "Dolphin"
-     ]
-    },
-    {
-     "word": "Adfhjkl",
-     "taboo": [
-      "Adfhjkl",
-      "Kkmfkfd",
-      "Kdgmkdf",
-      "Rfipjw",
-      "Lthdflthr",
-      "Lhltker"
      ]
     },
     {
@@ -40617,17 +40297,7 @@
       "Darell"
      ]
     },
-    {
-     "word": "Http://Phen375R",
-     "taboo": [
-      "Http://Phen375R",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    },
+ 
     {
      "word": "Kite",
      "taboo": [
@@ -45221,17 +44891,7 @@
       "Careless"
      ]
     },
-    {
-     "word": "Http://Www.Sgpu",
-     "taboo": [
-      "Http://Www.Sgpu",
-      "",
-      "",
-      "",
-      "",
-      ""
-     ]
-    },
+    
     {
      "word": "Cabria",
      "taboo": [
@@ -45538,17 +45198,6 @@
       "French",
       "English",
       "Urdu"
-     ]
-    },
-    {
-     "word": "Talkin Aloya",
-     "taboo": [
-      "Talkin Aloya",
-      "Baak",
-      "Sdaa",
-      "Dsadf",
-      "Sdww",
-      "Wawe"
      ]
     },
     {
@@ -46552,19 +46201,7 @@
       "Crush"
      ]
     },
-    {
-     "word": "Alidwdhjfba",
-     "taboo": [
-      "Alidwdhjfba",
-      "Vabdf",
-      "Dawhjf",
-      "Fdkjhabe",
-      "",
-      "Uhlfw34",
-      "V",
-      "Heagw"
-     ]
-    },
+   
     {
      "word": "Escalator",
      "taboo": [
@@ -48017,19 +47654,7 @@
       "Realm"
      ]
     },
-    {
-     "word": "Alidwdhjfba",
-     "taboo": [
-      "Alidwdhjfba",
-      "Vabdf",
-      "Dawhjf",
-      "Fdkjhabe",
-      "",
-      "Uhlfw34",
-      "V",
-      "Heagw"
-     ]
-    },
+   
     {
      "word": "Pupil",
      "taboo": [
@@ -49868,17 +49493,6 @@
      ]
     },
     {
-     "word": "Adfhjkl",
-     "taboo": [
-      "Adfhjkl",
-      "Kkmfkfd",
-      "Kdgmkdf",
-      "Rfipjw",
-      "Lthdflthr",
-      "Lhltker"
-     ]
-    },
-    {
      "word": "Creator",
      "taboo": [
       "Creator",
@@ -49953,17 +49567,6 @@
       "Gohan",
       "Trunks",
       "Goten"
-     ]
-    },
-    {
-     "word": "Bannana",
-     "taboo": [
-      "Bannana",
-      "Fruit",
-      "This",
-      "Is",
-      "A",
-      "Thing"
      ]
     },
     {
