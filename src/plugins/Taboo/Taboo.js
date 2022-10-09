@@ -19,6 +19,7 @@ module.exports = class Taboo extends Base {
     async collector() {
         if (!this.channel) return;
         const embed = {
+            color: '#BDB76B',
             title: `A game of taboo has started by ${this.member.user.username}`,
             description: stripIndents`
             Click on the button to join or leave! If you do not know how to play, please type \`/taboo info\` for more information!
@@ -59,6 +60,7 @@ module.exports = class Taboo extends Base {
             });
             this.channel.send({ embeds: [
                 {
+                    color: '#BDB76B',
                     title: 'Participant Total: ' + members.length,
                     description: members.join(',')
                 }
@@ -79,6 +81,7 @@ module.exports = class Taboo extends Base {
         member.send({
             embeds: [
                 {
+                    color: '#BDB76B',
                     description: stripIndents`
                     **Word:**: \`${this.word.word}\`
                     **Taboo:** \`${this.word.taboo.join('`, `')}\`
@@ -111,6 +114,7 @@ module.exports = class Taboo extends Base {
                     console.log('a');
                     this.setPoint(member, -3);
                     this.channel.send({embeds: [{
+                        color: '#BDB76B',
                         title: 'You broke the taboo!',
                         description: 'For being bad at the game, you recieved `-3` points'
                     }]});
@@ -133,6 +137,7 @@ module.exports = class Taboo extends Base {
     }
     async endRound() {
         const embed = {
+            color: '#BDB76B',
             title: 'Round Ended!',
             description: stripIndents`
             **Word:** \`${this.word.word}\`
@@ -157,6 +162,7 @@ module.exports = class Taboo extends Base {
         this.channel.send({
             embeds: [
                 {
+                    color: '#BDB76B',
                     title: 'Game Ended! Here are the points!',
                     description: stripIndents`${map.join('\n') || 'Noone scored any points LOL'}`,
                     footer: { text: 'Thanks for playing!' }

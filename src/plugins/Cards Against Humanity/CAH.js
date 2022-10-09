@@ -13,6 +13,7 @@ module.exports = class CAH extends Base {
     }
     async start() {
         const embed = {
+            color: '#BDB76B',
             title: 'Cards against Humanity!',
             description: this.phrase.replace(/_/g, '_______'),
             footer: {
@@ -88,6 +89,7 @@ module.exports = class CAH extends Base {
         this.channel.send({
             embeds: [
                 {
+                    color: '#BDB76B',
                     title: this.channel.guild.members.cache.get(winner.user).user.tag  + ' won!',
                     description: this.phrase.replace(/_/g, `**${winner.submission}**`),
                     footer: { text: 'Achieved a total of ' + winner.points + ' points' }
@@ -98,6 +100,7 @@ module.exports = class CAH extends Base {
         this.channel.send({
             embeds: [
                 {
+                    color: '#BDB76B',
                     description: mp.join('\n')
                 }
             ]
