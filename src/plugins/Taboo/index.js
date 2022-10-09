@@ -3,7 +3,6 @@ const TabooGame = require('./Taboo');
 module.exports = class TabooPlugin extends Plugin {
     constructor(kottu) {
         super(kottu);
-        this.plugin = 'taboo';
         this.name = 'taboo';
         this.kottu = kottu;
         this.description = 'Play a game of taboo! Describe a word without breaking the rules!',
@@ -16,6 +15,7 @@ module.exports = class TabooPlugin extends Plugin {
     }
     createGame(channel, member) {
         if (this.games[channel.guild.id]) return Promise.reject('A game is already running');
+        if (!this.isEnabled(channel.guild, this)) return Promise.reject('This game is disabled!');
         try {
             const game = new TabooGame(this, { channel, member });
             this.games[channel.guild.id] = game;

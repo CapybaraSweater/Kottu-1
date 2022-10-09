@@ -10,8 +10,8 @@ module.exports = class Plugin extends Base {
     }
     isEnabled(guild, plugin) {
         let plugins = this.db.guilds.getDisabledPlugins.pluck().get(guild.id) || [];
-        if (typeof plugins === 'string') plugins = plugins.split(' ');
-        if (plugins.includes(plugin)) return false;
+        if (typeof plugins === 'string') plugins = plugins.split(',');
+        if (plugins.includes(plugin.name)) return false;
         else return true;
     }
     getWinnerEmbed(user, game, coins) {

@@ -11,7 +11,7 @@ db.prepare(`
         guild_id TEXT PRIMARY KEY,
         admin_role TEXT,
         disabled_plugins TEXT,
-        blacklisted TEXT
+        blacklisted INTEGER NOT NULL
     );
 `).run();
 
@@ -21,12 +21,13 @@ db.prepare(`
         banner TEXT,
         phrase TEXT,
         color TEXT,
-        blacklisted INTEGER DEFAULT 0 NOT NULL,
+        blacklisted INTEGER NOT NULL,
         inventory TEXT,
         stats TEXT
     )
 `).run();
 const guilds = {
+    insertRow         : db.prepare('INSERT OR IGNORE INTO settings (guild_id, blacklisted) VALUES (?, 0);'),
     getRow            : db.prepare('SELECT * FROM settings WHERE guild_id = ?;'),
     getGuilds         : db.prepare('SELECT guild_id FROM settings'),
     getAdminRole      : db.prepare('SELECT admin_role FROM settings WHERE guild_id = ?;'),
@@ -38,6 +39,7 @@ const guilds = {
     setBlacklisted    : db.prepare('UPDATE settings SET blacklisted = ? WHERE guild_id = ?;'),
 };
 const user = {
+    insertRow         : db.prepare('INSERT OR IGNORE INTO users (user_id, blacklisted) VALUES (?, 0);'),
     getRow            : db.prepare('SELECT * FROM users WHERE user_id = ?;'),
     getBanner         : db.prepare('SELECT banner FROM users WHERE user_id = ?;'),
     getPhrase         : db.prepare('SELECT phrase FROM users WHERE user_id = ?;'),

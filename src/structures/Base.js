@@ -82,7 +82,7 @@ module.exports = class Base {
         if (!content) return Promise.resolve();
         if (Array.isArray(content)) content = content.join('\n');
         if (typeof content === 'string') content = { content: content };
-        interaction.reply(content).catch(Promise.reject);
+        return interaction.reply(content);
     }
     toBlock(str, lang = '') {
         return `\`\`\`${lang}\n${str}\`\`\``;

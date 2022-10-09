@@ -23,9 +23,10 @@ module.exports = class CAH extends Command {
     execute() {
         return Promise.resolve();
     }
-    start(int) {
-        int.reply({ content: 'Creating a game' , ephemeral: true });
-        return this.kottu.plugins.get('Cards against humanity').start(int.channel, false);
+    async start(int) {
+        await this.reply(int, { content: 'Creating game...', ephemeral: true });
+        return this.kottu.plugins.get('cards against humanity').start(int.channel, false)
+            .catch((err)=>err.type ? int.editReply('Unexpected Error. Try again later!') : int.editReply(err));
     }
 
 };

@@ -3,11 +3,12 @@ const Game = require('./CAH');
 module.exports = class CardsAgainstHumanityPlugin extends Plugin {
     constructor(...args) {
         super(...args);
-        this.name = 'Cards against humanity';
+        this.name = 'cards against humanity';
         this.description = 'Complete the sentence to make the funniest phrase.';
         this.games = {};
     }
     getPhrase(explicit) {
+        
         let file = 'cah.json';
         if (explicit === true) file = 'expl-cah.json';
         const json = require('../../assets/'+file);
@@ -17,9 +18,12 @@ module.exports = class CardsAgainstHumanityPlugin extends Plugin {
         return text;
     }
     start(channel, explicit) {
-        if (this.games[channel.id]) return channel.send('A game is already running in this channel');
+        if (this.games[channel.id]) return Promise.reject('A game is already running in this channel');
+        if (!this.isEnabled(channel.guild, this)) return Promise.reject('This game is disabled!');
+
         const game = new Game(this, channel, explicit);
-        return this.games[channel.guild.id] = game;
+        this.games[channel.id] = game;
+        return Promise.resolve(game);
     }
     async interactionCreate(int) {
         if (int.isButton()) {
@@ -32,7 +36,7 @@ module.exports = class CardsAgainstHumanityPlugin extends Plugin {
         }
         if (int.isModalSubmit()) {
             if (!this.games[int.customId]) return;
-            const submission = int.fields.getTextInputValue(int.guildId);
+            const submission = int.fields.getTextInputValue(int.channel.id);
             this.games[int.customId].data.push({ user: int.user.id, submission: submission, points: 0 });
             return int.reply({ content: 'Submitted!', ephemeral: true });
         }        

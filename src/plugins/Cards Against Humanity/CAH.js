@@ -24,10 +24,10 @@ module.exports = class CAH extends Base {
             .setLabel('Submission')
             .setPlaceholder('Be funny for once in your life')
             .setRequired(true)
-            .setMaxLength(500)
+            .setMaxLength(50)
             .setStyle(TextInputStyle.Short);
         this.modal = new ModalBuilder()
-            .setCustomId(this.channelId)
+            .setCustomId(this.channel.id)
             .setTitle('Cards against humanity');
         const actionRow = new ActionRowBuilder().addComponents(input);
 
@@ -54,7 +54,7 @@ module.exports = class CAH extends Base {
         }, 60*1000);            
     }
     startVote() {
-        if (this.data.length<1) return this.lonely();
+        if (this.data.length<2) return this.lonely();
         const list = this.data.map((r, i)=>`**${i+1}.** ${this.phrase.replace(/_/g, '**'+ r.submission + '**')}`);
         this.channel.send(list.join('\n'));
         this.channel.send('Send your vote by choosing a number!');
@@ -70,6 +70,7 @@ module.exports = class CAH extends Base {
             this.data[num-1].points += 1;
             this.voted.push(m.author.id);
             m.delete();
+            this.channel.send(`${m.author.tag} has voted!`);
         });
         collector.on('end', ()=> {
             this.end();
@@ -84,7 +85,7 @@ module.exports = class CAH extends Base {
             return b.points - a.points;
         });
         const winner = lb[0];
-        return this.channel.send({
+        this.channel.send({
             embeds: [
                 {
                     title: this.channel.guild.members.cache.get(winner.user).user.tag  + ' won!',
@@ -93,6 +94,15 @@ module.exports = class CAH extends Base {
                 }
             ]
         });
+        const mp = lb.map((r, i)=> `**${i+1}.** ${this.phrase.replace(/_/g, '`'+r.submission+'`')}\nBy: <@${r.user}> | Points: ${r.points}`);
+        this.channel.send({
+            embeds: [
+                {
+                    description: mp.join('\n')
+                }
+            ]
+        });
+        delete this.module.games[this.channel.id];
     }
 };
 //
