@@ -11,4 +11,4 @@ if you require information about commands or wish to visit our support server, y
 - [Cards Against Humanity](/src/plugins/Cards%20Against%20Humanity/)
 - [Taboo](/src/plugins/Taboo/)
 <br>
-More plugins will arrive at a later date.
+More plugins will arrive at a later date
